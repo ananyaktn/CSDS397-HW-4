@@ -1,6 +1,7 @@
 dbt init hwfour ## using duckdb
 cd hwfour
-mv "/Users/ananyakotian/Downloads/employee_data_clean (1).csv" seeds/employee_data_clean.csv
+cd seeds
+mv "pathname" seeds/employee_data_clean.csv
 dbt seed
 cd models
 touch employee_data.sql salary_to_department_analysis.sql salary_to_tenure_analysis.sql performance_by_salary_analysis.sql experience_by_age.sql department_by_country.sql experience_by_performance.sql
@@ -76,3 +77,5 @@ nano experience_by_performance.sql
   FROM {{ ref('employee_data') }}
   GROUP BY Performance_Rating
   ORDER BY Performance_Rating
+
+dbt run
