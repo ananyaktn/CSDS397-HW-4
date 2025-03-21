@@ -79,3 +79,6 @@ nano experience_by_performance.sql
   ORDER BY Performance_Rating
 
 dbt run
+
+## to view results
+duckcli dev.duckdb
